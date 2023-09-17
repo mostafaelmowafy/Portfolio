@@ -241,7 +241,7 @@ nav #right li:last-of-type a{
     transform: scale(1.05);
 }
 #landing #info svg{
-    width: 1.5vw;height: 1.5vw;
+    width: calc(18px + .8vw);height: calc(18px + .8vw);
 }
 #landing #social li{
     display: inline;
