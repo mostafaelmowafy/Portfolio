@@ -452,8 +452,8 @@ h3 i{
     color: var(--headColor);
 }
 #pageThree .content{
-    margin-inline: 50px;
-}
+    margin-inline: 50px
+};
 #pageThree p {
     font-size: calc(14px + .3vw);
     line-height: 24px;
@@ -491,6 +491,7 @@ h3 i{
     margin-block: 120px;
     align-items: center;
     justify-content: center;
+    padding-inline-start: 0px;
 }
 #pageThree ul li{
     display: flex;
@@ -509,6 +510,7 @@ h3 i{
 @media(max-width:767px){
     #pageThree .content{
         margin-inline: 25px;
+        
     }
 }
 #pageFour{
@@ -652,8 +654,8 @@ h3 i{
     color: var(--mainColor);
 }
 #pageFive .box .content ul li{
-    background-color: #E5E7EB;
-    box-shadow: 0px 5px 5px rgb(134, 141, 145);
+    background-color: var(--pagecolor);
+    box-shadow: 0px 0px 5px rgb(134, 141, 145);
     padding: 4px 10px 4px 10px;
     border-radius: 12px;
 }
@@ -699,6 +701,9 @@ h3 i{
     align-items: center;
     margin-block-start: 0;
     justify-content: center;
+}
+#pageSix .container ul{
+    padding-inline-start: 0;
 }
 #pageSix .container ul li a{
     font-size: calc(12px + .6vw);

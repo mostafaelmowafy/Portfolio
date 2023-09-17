@@ -44,12 +44,12 @@ window.addEventListener("load",()=>{
     window.addEventListener("scroll", reveal);
 
 
-        var mode = document.getElementById("mode");
+        var mode = document.querySelectorAll(".mode");
         var root = document.querySelector(":root");
         console.log(root.style.setProperty)
-        mode.addEventListener("click",()=>{
-        if(mode.children[0].classList[0] === "sun"){
-            mode.innerHTML = `<i class="moon fa-solid fa-moon fa-2xl"></i>`;
+        mode[0].addEventListener("click",()=>{
+        if(mode[0].children[0].classList[0] === "sun"){
+            mode[0].innerHTML = `<i class="moon fa-solid fa-moon fa-2xl"></i>`;
             window.localStorage.setItem('mode','<i class="moon fa-solid fa-moon fa-2xl"></i>');
 
             root.style.setProperty('--pagecolor', '#111827');
@@ -67,7 +67,7 @@ window.addEventListener("load",()=>{
             root.style.setProperty('--tableColor', '#1F2937');
             window.localStorage.setItem('--tableColor', '#1F2937');
         }else{
-            mode.innerHTML =`<i class="sun fa-solid fa-sun fa-xl" ></i>`;
+            mode[0].innerHTML =`<i class="sun fa-solid fa-sun fa-xl" ></i>`;
             window.localStorage.setItem('mode','<i class="sun fa-solid fa-sun fa-xl" ></i>')
             
             root.style.setProperty('--pagecolor', '#F9FAFB');
@@ -87,7 +87,62 @@ window.addEventListener("load",()=>{
         }
     });
     if(window.localStorage.getItem('--mainColor')){
-        mode.innerHTML =window.localStorage.getItem('mode');
+        mode[0].innerHTML =window.localStorage.getItem('mode');
+            
+        root.style.setProperty('--pagecolor',window.localStorage.getItem('--pagecolor'));
+
+        root.style.setProperty('--bodyColor',window.localStorage.getItem('--bodyColor'));
+        
+
+        root.style.setProperty('--mainColor',window.localStorage.getItem('--mainColor'));
+        
+
+        root.style.setProperty('--headColor',window.localStorage.getItem('--headColor'));
+        
+
+        root.style.setProperty('--tableColor',window.localStorage.getItem('--tableColor'));
+    }
+    mode[1].addEventListener("click",()=>{
+        if(mode[1].children[0].classList[0] === "sun"){
+            mode[1].innerHTML = `<i class="moon fa-solid fa-moon fa-2xl"></i>`;
+            window.localStorage.setItem('mode','<i class="moon fa-solid fa-moon fa-2xl"></i>');
+
+            root.style.setProperty('--pagecolor', '#111827');
+            window.localStorage.setItem('--pagecolor', '#111827');
+            
+            root.style.setProperty('--bodyColor', '#030712');
+            window.localStorage.setItem('--bodyColor', '#030712');
+
+            root.style.setProperty('--mainColor', '#D1D5DB');
+            window.localStorage.setItem('--mainColor', '#D1D5DB');
+
+            root.style.setProperty('--headColor', '#F9FAFB');
+            window.localStorage.setItem('--headColor', '#F9FAFB');
+
+            root.style.setProperty('--tableColor', '#1F2937');
+            window.localStorage.setItem('--tableColor', '#1F2937');
+        }else{
+            mode[1].innerHTML =`<i class="sun fa-solid fa-sun fa-xl" ></i>`;
+            window.localStorage.setItem('mode','<i class="sun fa-solid fa-sun fa-xl" ></i>')
+            
+            root.style.setProperty('--pagecolor', '#F9FAFB');
+            window.localStorage.setItem('--pagecolor', '#F9FAFB');
+            
+            root.style.setProperty('--bodyColor', 'white');
+            window.localStorage.setItem('--bodyColor', 'white');
+
+            root.style.setProperty('--mainColor', '#4B5563');
+            window.localStorage.setItem('--mainColor', '#4B5563');
+
+            root.style.setProperty('--headColor', '#111827');
+            window.localStorage.setItem('--headColor', '#111827');
+
+            root.style.setProperty('--tableColor', 'white');
+            window.localStorage.setItem('--tableColor', 'white');
+        }
+    });
+    if(window.localStorage.getItem('--mainColor')){
+        mode[1].innerHTML =window.localStorage.getItem('mode');
             
         root.style.setProperty('--pagecolor',window.localStorage.getItem('--pagecolor'));
 
