@@ -356,17 +356,6 @@ nav #right li:last-of-type a{
 #pageTwo .right{
     width: 60%;
 }
-@media(max-width:767px){
-    #pageTwo .container{
-        display: flex;
-        flex-direction: column;
-        gap: 0vw;
-        margin-block: 0px 0px;
-    }
-    #pageTwo .right{
-        width: 100%;
-    }
-}
 h3{
     font-size: calc(16px + .3vw);
     padding-block-start: 50px;
@@ -407,13 +396,38 @@ h3::after{
         margin-block: 50px 100px;
     }
     #pageTwo .container .left .border{
-        width: 106%;
+        width: 104%;
         height: 95%;
-        border: solid #bbbcbe;
-        border-width: 0 25px 25px;
-        position: absolute;
-        bottom: -35px;
-        left: -35px;
+        border-width: 0 15px 15px;
+        bottom: -20px;
+        left: -20px;
+    }
+    #pageTwo .container{
+        display: flex;
+        flex-direction: column;
+        gap: 0vw;
+        margin-block: 0px 0px;
+    }
+    #pageTwo .right{
+        width: 100%;
+    }
+}
+@media(max-width:676px){
+    #pageTwo .container .left .border{
+        bottom: -19px;
+        left: -19px;
+    }
+}
+@media(max-width:530px){
+    #pageTwo .container .left .border{
+        bottom: -18px;
+        left: -18px;
+    }
+}
+@media(max-width:400px){
+    #pageTwo .container .left .border{
+        bottom: -17px;
+        left: -17px;
     }
 }
 #pageTwo h2{
