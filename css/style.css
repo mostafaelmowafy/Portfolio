@@ -370,6 +370,15 @@ nav #right li:last-of-type a {
 #pageTwo .right {
   width: 60%;
 }
+#pageTwo .right a {
+  color: var(--mainColor);
+  font-weight: 500;
+  transition: all 0.5s;
+}
+#pageTwo .right a:hover {
+  color: var(--iconHover);
+  transform: scale(1.05);
+}
 h3 {
   font-size: calc(16px + 0.3vw);
   padding-block-start: 50px;
@@ -568,6 +577,8 @@ h3 i {
   box-shadow: 0px 0px 15px rgb(134, 141, 145);
   transition: box-shadow 1s, transform 1s;
   padding: 20px;
+  width: 80%;
+  max-width: 1000px;
 }
 #pageFour .box p {
   text-align: start;
@@ -609,6 +620,10 @@ h3 i {
   #pageFour .container {
     margin-inline: 60px;
   }
+  #pageFour .box {
+    margin-block-end: 80px;
+    width: 100%;
+  }
   #pageFour .box div h4 {
     font-size: 16px;
   }
@@ -633,9 +648,8 @@ h3 i {
 }
 #pageFive p {
   font-size: calc(14px + 0.3vw);
-  line-height: 24px;
   text-align: center;
-  margin-block: 30px 0px;
+  margin-block: 20px 0px;
 }
 #pageFive .box {
   display: flex;
@@ -698,10 +712,20 @@ h3 i {
   font-size: calc(12px + 0.3vw);
   line-height: 24px;
 }
+@media (max-width: 1270px) {
+  #pageFive .box {
+    height: 60vh;
+  }
+}
+@media (max-width: 970px) {
+  #pageFive .box {
+    height: 70vh;
+  }
+}
 @media (max-width: 767px) {
   #pageFive .box {
     flex-direction: column;
-    height: 60vh;
+    height: fit-content;
   }
   #pageFive .box .image {
     width: 100%;
@@ -727,7 +751,7 @@ h3 i {
 }
 #pageSix {
   background-color: var(--pagecolor);
-  height: 55vh;
+  height: 60vh;
   padding-block-start: 15px;
 }
 #pageSix p:first-of-type {
